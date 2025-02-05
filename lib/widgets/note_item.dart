@@ -20,7 +20,7 @@ class NoteItem extends StatelessWidget {
               "Flutter Tips",
               style: TextStyle(
                 color: Colors.black,
-                fontSize: 27,
+                fontSize: 29,
               ),
             ),
             subtitle: Padding(
@@ -29,7 +29,7 @@ class NoteItem extends StatelessWidget {
                 "Build your career with Mostafa Ragab",
                 style: TextStyle(
                   color: Colors.black.withValues(alpha: 0.5),
-                  fontSize: 19,
+                  fontSize: 18,
                 ),
               ),
             ),
@@ -37,7 +37,7 @@ class NoteItem extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(
                   FontAwesomeIcons.trash,
-                  size: 23,
+                  size: 22,
                   color: Colors.black,
                 )),
           ),
