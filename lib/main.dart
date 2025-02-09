@@ -3,6 +3,7 @@ import 'package:hive/hive.dart';
 
 // import 'package:hive_flutter/adapters.dart';
 import 'package:note_app/constains.dart';
+import 'package:note_app/models/note.dart';
 
 import 'package:note_app/views/notes_view.dart';
 import 'package:path_provider/path_provider.dart';
@@ -14,6 +15,7 @@ void main() async {
   Hive.init(appDocumentDir.path);
 
   await Hive.openBox(kNotesBox);
+  Hive.registerAdapter(NoteAdapter());
   runApp(const NotesApp());
 }
 
