@@ -13,7 +13,7 @@ class NoteItem extends StatelessWidget {
           context,
           MaterialPageRoute(
             builder: (context) {
-              return EditNoteView();
+              return const EditNoteView();
             },
           ),
         );
@@ -28,7 +28,7 @@ class NoteItem extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              title: Text(
+              title: const Text(
                 "Flutter Tips",
                 style: TextStyle(
                   color: Colors.black,
@@ -47,7 +47,7 @@ class NoteItem extends StatelessWidget {
               ),
               trailing: IconButton(
                   onPressed: () {},
-                  icon: Icon(
+                  icon: const Icon(
                     FontAwesomeIcons.trash,
                     size: 22,
                     color: Colors.black,

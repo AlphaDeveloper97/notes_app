@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'package:note_app/constains.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
-
+  const CustomButton({super.key, this.onTap});
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
             color: kPrimaryColor, borderRadius: BorderRadius.circular(8)),
         height: 50,
         width: MediaQuery.of(context).size.width,
-        child: Center(
+        child: const Center(
           child: Text(
             "Add",
             style: TextStyle(
