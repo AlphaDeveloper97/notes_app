@@ -4,7 +4,7 @@ import 'package:hive/hive.dart';
 
 // import 'package:hive_flutter/adapters.dart';
 import 'package:note_app/constains.dart';
-import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
+
 import 'package:note_app/models/note.dart';
 import 'package:note_app/simple_bloc_observer.dart';
 
