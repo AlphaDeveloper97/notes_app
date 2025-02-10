@@ -17,13 +17,13 @@ class AddNoteModelSheet extends StatelessWidget {
             if (state is AddNoteFailure) {
               print("failed is ${state.errMessage}");
             }
-            if (state is AddNoteFailure) {
+            if (state is AddNoteSuccess) {
               Navigator.pop(context);
             }
           },
           builder: (context, state) {
             return ModalProgressHUD(
-              inAsyncCall: State is AddNoteLoading ? true : false,
+              inAsyncCall: state is AddNoteLoading ? true : false,
               child: const AddNoteForm(),
             );
           },

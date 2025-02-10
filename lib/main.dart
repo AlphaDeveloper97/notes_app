@@ -6,6 +6,7 @@ import 'package:hive/hive.dart';
 import 'package:note_app/constains.dart';
 import 'package:note_app/cubits/add_note_cubit/add_note_cubit.dart';
 import 'package:note_app/models/note.dart';
+import 'package:note_app/simple_bloc_observer.dart';
 
 import 'package:note_app/views/notes_view.dart';
 import 'package:path_provider/path_provider.dart';
@@ -15,7 +16,7 @@ void main() async {
   // await Hive.initFlutter();
   final appDocumentDir = await getApplicationDocumentsDirectory();
   Hive.init(appDocumentDir.path);
-
+  Bloc.observer = SimpleBlocObserver();
   await Hive.openBox(kNotesBox);
   Hive.registerAdapter(NoteAdapter());
   runApp(const NotesApp());
